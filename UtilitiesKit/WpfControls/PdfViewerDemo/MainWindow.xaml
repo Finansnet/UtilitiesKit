@@ -1,0 +1,19 @@
+﻿<Window x:Class="PdfViewerDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:pdf="clr-namespace:UtilitiesKit.WpfControls.PdfViewer;assembly=PdfViewer"
+        Title="MainWindow" Height="550" Width="625">
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		
+		<StackPanel Grid.Row="0" Orientation="Horizontal">
+			<Button Click="Button_Load1">Load1</Button>
+			<Button Click="Button_Load2">Load2</Button>
+			<Button Click="Button_Unload">Unload</Button>
+		</StackPanel>
+		<pdf:PdfViewer Grid.Row="1" Name="_PdfViewer" />
+	</Grid>
+</Window>
